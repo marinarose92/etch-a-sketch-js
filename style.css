@@ -24,7 +24,8 @@ time, mark, audio, video {
     height:789px;
     padding:none;
     margin-top:2%;
-    background-color:red;
+    background-color:white;
+    border: 1px solid black;
 }
 .grid {
     width:50px;
@@ -34,5 +35,5 @@ time, mark, audio, video {
     padding:none;
 }
 .blue {
-    background-color:blue;
+    background-color:black;
 }
