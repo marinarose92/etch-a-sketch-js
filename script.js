@@ -1,9 +1,18 @@
 function renderCanvas() {
     let containerSelector = document.getElementById('container');
+    let clearButton = document.getElementById('clear');
+    let y = 256;
+
+    clearButton.addEventListener('click', event => {
+        y = window.prompt("What size grid do you want?");
+        console.log(y);
+    })
 
     x = 0;
 
-    while (x <= 255) {
+
+
+    while (x <= y) {
         let div = document.createElement('div');
         containerSelector.appendChild(div);
         div.id = x;
