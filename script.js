@@ -1,17 +1,18 @@
-function renderCanvas() {
+function UI() {
     let containerSelector = document.getElementById('container');
     let clearButton = document.getElementById('clear');
-    let y = 256;
 
     clearButton.addEventListener('click', event => {
-        y = window.prompt("What size grid do you want?");
-        console.log(y);
+        let userInput = window.prompt("What size grid do you want?");
+        renderCustomCanvas(userInput);
     })
 
+    renderInitialCanvas(containerSelector);
+}
+
+function renderInitialCanvas (containerSelector) {
+    let y = 256;
     x = 0;
-
-
-
     while (x <= y) {
         let div = document.createElement('div');
         containerSelector.appendChild(div);
@@ -22,7 +23,11 @@ function renderCanvas() {
 
     const gridSelector = document.querySelectorAll('.grid');
 
-    drawingLogic(gridSelector);
+    drawingLogic(gridSelector)
+}
+
+function renderCustomCanvas (userInput) {
+    console.log(userInput);
 }
 
 function drawingLogic(gridSelector) {
@@ -33,4 +38,4 @@ function drawingLogic(gridSelector) {
     });
 }
 
-renderCanvas();
+UI();
