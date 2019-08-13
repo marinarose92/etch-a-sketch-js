@@ -34,10 +34,10 @@ function renderCanvas (containerSelector, userInput) {
             x++
         }
         const gridSelector = document.querySelectorAll('.grid');
-        drawingLogic(gridSelector)
+        drawingColors(gridSelector)
 }
 
-function drawingLogic(gridSelector) {
+function drawingColors(gridSelector) {
     gridSelector.forEach(div => {
         div.addEventListener('mouseover', event => {
             let randomColor = Math.floor(Math.random()*16777215).toString(16);
